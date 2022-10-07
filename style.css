@@ -35,7 +35,7 @@ ul {
 }
 
 .bloc .container {
-    padding-left: 0;
+    padding-left: 25px;
     padding-right: 0;
     width: 100%;
 }
@@ -629,7 +629,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF;
+    color: black;
 }
 
 .portfolio-thumb {
@@ -674,7 +674,7 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF;
+    color: black;
 }
 
 .btn-atomic-tangerine:hover {
