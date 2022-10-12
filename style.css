@@ -641,9 +641,12 @@ h4 {
     margin-bottom: 44px;
     margin-top: 50px;
 }
-
+.navbar-header{
+    width: 37%;
+}
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+    width: 80%;
 }
 
 .black-background {
@@ -843,7 +846,7 @@ h4 {
     }
     .navbar-brand img {
         max-height: 40px;
-        width: auto;
+        width: 80%;
     }
     .nav-invert .navbar-header {
         float: none;
