@@ -596,6 +596,10 @@ p {
 justify-content: space-evenly;
 margin-top: 10px;
 margin-bottom: 10px;
+font-size: 30px;
+width: 20%;
+margin-left: auto;
+margin-right: auto;
 }
 
 h2 {
