@@ -7,6 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 a,
 button {
 text-decoration: none;
@@ -236,6 +237,7 @@ ul {
 .navbar {
    display: flex;
    justify-content: space-between;
+   width: 95%;
 }
 
 .navbar-brand {
@@ -676,6 +678,9 @@ h4 {
     color: black;
 }
 .row h2 {
+    color: black;
+}
+.txt {
     color: white;
 }
 
