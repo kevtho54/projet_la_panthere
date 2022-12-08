@@ -36,9 +36,9 @@ ul {
 }
 
 .bloc .container {
-    padding-left: 25px;
+    padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    
 }
 
 .bloc-lg {
@@ -235,9 +235,8 @@ ul {
 }
 
 .navbar {
-   display: flex;
-   justify-content: space-between;
-   width: 95%;
+   margin-bottom: 0;
+   z-index: 1;
 }
 
 .navbar-brand {
@@ -259,7 +258,27 @@ ul {
     min-width: 100px;
 }
 
+.navbar .nav {
+    padding-top: 2px;
+    margin-right: -16px;
+    float: right;
+    z-index: 1;
+}
 
+.nav > li {
+    float: left;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.navbar-nav .open .dropdown-menu > li > a {
+    text-align: inherit;
+}
+
+.nav > li a:hover,
+.nav > li a:focus {
+    background: transparent;
+}
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
@@ -274,9 +293,28 @@ ul {
     width: 26px;
 }
 
+.nav-invert .navbar .nav {
+    float: left;
+}
 
+.nav-invert .navbar-header,
+.nav-invert .navbar-brand {
+    float: right;
+    position: relative;
+    z-index: 2;
+}
 @media (min-width: 768px) {
-
+    .site-navigation {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(0, -50%);
+        -webkit-transform: translateY(-50%);
+    }
+    .nav > li .dropdown-menu a,
+    .nav > li .dropdown-menu a:hover {
+        color: #484848;
+    }
     .nav-invert .site-navigation {
         left: 0;
         right: 0;
@@ -605,7 +643,8 @@ margin-right: auto;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    text-align: center;
 }
 
 h3 {
@@ -647,9 +686,8 @@ h4 {
     margin-bottom: 44px;
     margin-top: 50px;
 }
-.navbar-header{
-    width: 37%;
-}
+
+
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
     width: 80%;
@@ -731,6 +769,7 @@ h4 {
     background-image: url("img/image-de-presentation.jpg");
 }
 
+
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
@@ -746,19 +785,21 @@ h4 {
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
-  
+    .navbar .nav {
+        max-width: 80%
+    }
     .nav-center.navbar .nav {
         max-width: 100%
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -776,6 +817,10 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
+    .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -784,6 +829,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -800,14 +847,19 @@ h4 {
     h6,
     p,
     #disqus_thread {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
     }
     .b-parallax {
         background-attachment: scroll;
     }
     .navbar .nav {
-       list-style-type: none;
+        padding-top: 0;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        float: none!important;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
     }
     .navbar.row {
         margin-left: 0;
@@ -820,18 +872,20 @@ h4 {
         -ms-transform: none;
     }
     .nav > li {
- 
+        margin-top: 0;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
+        background: rgba(0, 0, 0, .05);
+        text-align: left;
         padding-left: 15px;
-        width: 100%;
-        margin-bottom: 10px;
+        padding-right: 15px;
+        
     }
     .nav > li:hover {
         background: rgba(0, 0, 0, .08);
     }
     .dropdown .dropdown a .caret {
         float: none;
-        margin: 5px 0 0 10px;
+        margin: 5px 0 0 10px!important;
         border: 4px solid black;
         border-bottom-color: transparent;
         border-right-color: transparent;
@@ -851,11 +905,14 @@ h4 {
         right: -1px;
     }
     .navbar-collapse {
-     margin-right: 5%;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-box-shadow: none;
+        box-shadow: none;
     }
     .navbar-brand img {
         max-height: 40px;
-        width: 80%;
+        width: auto;
     }
     .nav-invert .navbar-header {
         float: none;
