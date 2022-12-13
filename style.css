@@ -40,7 +40,10 @@ ul {
     padding-right: 0;
     
 }
-
+#form_1 {
+    margin-left: 25px;
+    text-align: center;
+}
 .bloc-lg {
     padding: 100px 50px;
 }
@@ -550,7 +553,6 @@ a[data-lightbox]:hover img {
     z-index: 1;
     opacity: 0.4;
 }
-
 .next-lightbox {
     padding: 6px 8px 1px 13px;
     right: 25px;
@@ -585,7 +587,16 @@ a {
     font-weight: 400;
     color: #575757;
 }
-
+label {
+    text-align: left;
+}
+.bloc-lg{
+    margin: auto;
+}
+.form-group{
+    margin-left: auto;
+    margin-right: auto;
+}
 .container {
     max-width: 1000px;
 }
@@ -611,6 +622,7 @@ a {
 p {
     font-size: 18px;
     overflow-wrap: break-word;
+    text-align: center;
 }
 
 .tight-width-whitespace {
@@ -793,13 +805,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -847,8 +859,8 @@ h4 {
     h6,
     p,
     #disqus_thread {
-        padding-left: 10px!important;
-        padding-right: 10px!important;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .b-parallax {
         background-attachment: scroll;
@@ -885,7 +897,7 @@ h4 {
     }
     .dropdown .dropdown a .caret {
         float: none;
-        margin: 5px 0 0 10px!important;
+        margin: 5px 0 0 10px;
         border: 4px solid black;
         border-bottom-color: transparent;
         border-right-color: transparent;
@@ -977,15 +989,33 @@ h4 {
     }
 }
 
+
+@media (max-width: 767px) {
+    .bloc-mob-center-text {
+        text-align: center;
+    }
+    
+    .form-group{
+        text-align: left;
+        margin: 0px;
+        width: 100%;
+    }
+    .social {
+        width: 30%;
+    }
+}
 @media (max-width: 400px) {
     .bloc {
         padding-left: 0;
         padding-right: 0;
     }
-}
-
-@media (max-width: 767px) {
-    .bloc-mob-center-text {
-        text-align: center;
+    #form_1 {
+       margin-left: 0px;
+    }
+    .btn-atomic-tangerine{
+        width: 100%;
+    }
+    .social {
+        width: 60%;
     }
 }
